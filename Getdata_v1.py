@@ -4,7 +4,7 @@ def char_range(c1, c2):
     for c in range(ord(c1), ord(c2)+1):
         yield chr(c)
 #Загоняем в вб информацию о рабочем екселе
-myconnection =cx_Oracle.connect('shoes', 'shoes', 'ORCL', encoding='utf8', nencoding='utf8')
+myconnection =cx_Oracle.connect('SHOES', 'SHOES', '//localhost:1521/xe', encoding='utf8', nencoding='utf8')
 mycursor = myconnection.cursor()
 wb = openpyxl.load_workbook('test.xlsx')
 # печатаем список листов
